@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="title">
+                    <h1>Todo List</h1>
+                </div>
+                <div class="form">
+                    <form autocomplete="off">
+                        <input type="text" class="todo-input" id="todoInput" placeholder="What needs to be done?"
+                            autofocus>
+                        <button class="todo-add" id="todoAdd" type="submit"><i
+                                class="fas fa-plus add-icon"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="outline">
+                    <ul class="todo-list" id="todoList">
+                    </ul>
+                </div>
+                <div class="utils">
+                    <div class="text">
+                        <span id="completedTask">0</span> of <span id="totalTask">0</span> tasks completed
+                    </div>
+                    <div class="filter">
+                        <button class="filter-button" id="all" onclick="filter('all')">All</button>
+                        <button class="filter-button" id="process" onclick="filter('process')">Process</button>
+                        <button class="filter-button" id="completed" onclick="filter('completed')">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

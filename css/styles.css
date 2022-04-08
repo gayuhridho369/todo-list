@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    background: linear-gradient(#ffc74e, #cc6504);
+    color: #212121;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 550px;
+    margin: 32px;
+    padding: 24px 40px;
+    background: rgba(255, 255, 255, .5)
+}
+
+.card-header .title {
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.card-header .form form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header .form input {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.25rem;
+    width: 100%;
+    border: none;
+    padding: 12px;
+    outline: 2px solid #f7f7f7;
+    background: #f7f7f7;
+}
+
+.card-header .form button {
+    font-size: 1.25rem;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    outline: 6px solid #f7f7f7;
+    color: #f7f7f7;
+    background: #eb780d;
+}
+
+.form button:active {
+    background: #cc6504;
+}
+
+.card-body .outline {
+    margin: 16px 0;
+    padding: 8px 0;
+    border: 3px solid #f7f7f7;
+}
+
+.card-body .todo-list {
+    padding: 0 16px;
+    height: 375px;
+    width: 100%;
+    list-style: none;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.todo-list .completed {
+    text-decoration: line-through;
+}
+
+.todo-list::-webkit-scrollbar {
+    display: none;
+}
+
+.todo-list button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.todo-list .todo {
+    margin-bottom: 8px;
+    padding: 12px;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, .5);
+}
+
+.todo-list .todo li {
+    flex: 1;
+}
+
+.todo-list .todo button {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    font-size: .85rem;
+    cursor: pointer;
+    color: #212121;
+}
+
+.todo-list .todo button:active {
+    font-size: 1rem;
+}
+
+.todo-list .todo .complete-button:hover {
+    color: #288a02;
+}
+
+.todo-list .todo .edit-button:hover {
+    color: #e29b00;
+}
+
+.todo-list .todo .delete-button:hover {
+    color: #db0000;
+}
+
+.todo-list .todo .button:disabled,
+.button[disabled] {
+    opacity: .25;
+}
+
+.todo-list .todo.editable {
+    background: #f7f7f7;
+}
+
+.utils {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.utils .text span {
+    font-weight: 500
+}
+
+.utils .filter button {
+    font-family: 'Maven Pro', sans-serif;
+    padding: 6px 9px;
+    border: none;
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+
+.utils .filter button.active {
+    background: #eb780d;
+    color: #f7f7f7;
+}
+
+@media (max-width: 525px) {
+    .card {
+        margin: 16px 8px;
+    }
+
+    .card-header .title {
+        font-size: .75rem;
+        letter-spacing: 1.25px;
+    }
+
+    .card-header .form input {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .card-header .form button {
+        font-size: 1rem;
+    }
+
+    .card-body .outline {
+        margin: 14px 0;
+        padding: 6px 0;
+        border: 2px solid #f7f7f7;
+    }
+
+    .card-body .todo-list {
+        padding: 0 10px;
+        height: 300px;
+    }
+
+    .todo-list .todo {
+        margin-bottom: 6px;
+        padding: 10px;
+        font-size: .85rem;
+    }
+
+    .todo-list .todo button {
+        padding: 3px;
+        font-size: .65rem;
+    }
+
+    .todo-list .todo button:active {
+        font-size: .7rem;
+    }
+
+    .utils {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .utils .text {
+        font-size: .85rem;
+    }
+
+    .utils .filter button {
+        font-size: .85rem;
+        padding: 4px 7px;
+    }
+}
